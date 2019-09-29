@@ -1,0 +1,24 @@
+@mixin flexCenter($direction , $background) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: $direction;
+    background: $background;
+}
+
+header{
+    @include flexCenter(column , red);
+    // background: lightblue;
+    color: $textColor;
+
+    button{
+        background: $primaryBtn;
+        &:hover{
+            background: red;
+        }
+        &::after{
+            content: 'Emad hamdy';
+        }
+    }
+}
